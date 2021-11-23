@@ -1,24 +1,35 @@
-#1
+# 1.10.5
+A = int(input())
+B = int(input())
+H = int(input())
+if A <= H <= B:
+    print ("Это нормально")
+elif A > H:
+    print ("Недосып")
+else:
+    print ("Пересып")
+
+# 1.10.6
 A = int(input())
 if (A % 4 == 0 and A % 100 != 0) or A % 400 == 0:
     print ("Високосный")
 else:
     print ("Обычный")
 
-#2
+# 1.12.1
 a, b, c = int(input()), int(input()), int(input())
 p = (a + b + c)/2
 S = (p * (p - a) * (p - b) * (p - c)) ** 0.5
 print (float(S))
 
-#3
+# 1.12.2
 a = int(input())
 if -15 < a <=12 or 14 < a < 17 or a >= 19:
     print (True)
 else:
     print (False)
 
-#4
+# 1.12.3
 ch1 = float(input())
 ch2 = float(input())
 oper = input()
@@ -46,7 +57,7 @@ elif oper == "div":
     else:
         print("Деление на 0!")
 
-#5
+# 1.12.4
 f = input()
 if f == "треугольник":
     a, b, c = int(input()), int(input()), int(input())
@@ -62,22 +73,22 @@ elif f == "круг":
     S = 3.14 * r ** 2
     print(S)
 
-#6
+# 1.12.5
 a, b, c = int(input()), int(input()), int(input())
 if b <= a >= c and a >= b <= c:
-    print(a,"\n",b,"\n",c)
+    print(str(a) + "\n" + str(b) + "\n" + str(c))
 elif c <= a >= b and a >= c <= b:
-    print(a,"\n",c,"\n",b)
+    print(str(a) + "\n" + str(c) + "\n" + str(b))
 elif a <= b >= c and b >= a <= c:
-    print(b,"\n",a,"\n",c)
+    print(str(b) + "\n" + str(a) + "\n" + str(c))
 elif c <= b >= a and b >= c <= a:
-    print(b,"\n",c,"\n",a)
+    print(str(b) + "\n" + str(c) + "\n" + str(a))
 elif b <= c >= a and c >= b <= a:
-    print(c,"\n",b,"\n",a)
+    print(str(c) + "\n" + str(b) + "\n" + str(a))
 elif a <= c >= b and c >= a <= b:
-    print(c,"\n",a,"\n",b)
+    print(str(c) + "\n" + str(a) + "\n" + str(b))
 
-#7
+# 1.12.6
 w = int(input())
 if w % 10 == 0 or (w + 5) % 10 == 0 or (w + 4) % 10 == 0 or (w + 3) % 10 == 0 or (w + 2) % 10 == 0 or (w + 1) % 10 == 0:
     print(w, "программистов")
@@ -88,7 +99,7 @@ elif (w + 9) % 10 == 0:
 elif (w + 8) % 10 == 0 or (w + 7) % 10 == 0 or (w + 6) % 10 == 0:
     print(w, "программиста")
 
-#8
+# 1.12.7
 w = list(input())
 x1 = []
 x2 = []
@@ -103,7 +114,7 @@ if sum(x1) == sum(x2):
 else:
     print("Обычный")
 
-#9
+# 2.1.11
 w = int(input())
 s = 0
 while w != 0:
@@ -111,7 +122,7 @@ while w != 0:
     w = int(input())
 print(s)
 
-#10
+# 2.1.12
 a, b = int(input()), int(input())
 if a == b:
     print(a)
@@ -126,8 +137,8 @@ else:
         if c == a * b:
             print(a * b)
 
-#11
-s =0
+# 2.2.4
+s = 0
 while s <= 100:
     s = int(input())
     if s < 10:
@@ -137,23 +148,23 @@ while s <= 100:
     else:
         print(s)
 
-#12
+# 2.3.3
 a, b, c, d = int(input()), int(input()), int(input()), int(input())
 if c == d:
     print("\t", c)
 else:
-    for x2 in range (c, d + 1):
-        print("\t", x2, end = "")
+    for x2 in range(c, d + 1):
+        print("\t", x2, end="")
         if x2 == d:
             print('')
-for x in range (a, b + 1):
-    print(x, end = "\t")
-    for x1 in range (c, d + 1):
-        print(x * x1, end = "\t")
+for x in range(a, b + 1):
+    print(x, end="\t")
+    for x1 in range(c, d + 1):
+        print(x * x1, end="\t")
         if x1 == d:
             print('')
 
-#13
+# 2.3.7
 a, b = int(input()), int(input())
 s = 0
 w = 0
@@ -161,12 +172,12 @@ if a % 3 == 1:
     a += 2
 elif a % 3 == 2:
     a += 1
-for a in range (a, b + 1, 3):
+for a in range(a, b + 1, 3):
     s += a
     w += 1
 print(s / w)
 
-#14
+# 2.4.3
 s = input()
 s1 = s.upper()
 w = len(s1)
@@ -174,13 +185,13 @@ w1 = s1.count("G")
 w2 = s1.count("C")
 print(((w1 + w2)/w) * 100)
 
-#14
+# 2.4.7
 s = input()
 w = len(s)
 a = 0
 k = 1
 x = ""
-for i in range (w):
+for i in range(w):
     if i != w - 1:
         if s[a] == s[a + 1]:
             k += 1
@@ -193,38 +204,37 @@ for i in range (w):
     else: x += str(s[a]) + str(k)
 print(x)
 
-# 15
+# 2.5.9
 s = [int(i) for i in input().split()]
 print(sum(s))
 
-#16
+# 2.5.10
 s = [int(i) for i in input().split()]
 w = len(s)
 x = ""
 if w == 1:
     print(str(s[0]))
 else:
-    for i in range (w):
+    for i in range(w):
         if i == 0:
             x += (str(s[1] + s[-1]) + " ")
         elif i == w - 1:
-            x += (str(s[-2] + s[0]) + " ")
+            x += (str(s[-2] + s[0]) + "")
         else:
             x += (str(s[i - 1] + s[i + 1]) + " ")
     print(x)
 
-#17
+# 2.5.11
 s = [int(i) for i in input().split()]
 s = sorted(s)
 w = len(s)
 x = ""
-x1 = ""
 if w == 1:
     print()
 else:
-    for i in range (w):
-        if i == w -1:
-            if x == x1:
+    for i in range(w):
+        if i == w - 1:
+            if x == "":
                 print()
             else:
                 x = x[0:-1]
@@ -234,7 +244,7 @@ else:
         elif s[i] == s[i + 1]:
             x += (str(s[i]) + " ")
 
-#18
+# 2.6.7
 x = [int(input())]
 while sum(x) != 0:
     x.append(int(input()))
@@ -243,17 +253,17 @@ for i in (x):
     w.append(i * i)
 print(sum(w))
 
-#19
+# 2.6.8
 s = int(input())
 w = 1
 x = ""
-for i in range (s):
+for i in range(s):
     x += (str(w) + " ")
     if w == x.count(str(w)):
         w += 1
 print(x[0:-1])
 
-#20 - 1
+# 2.6.9 - 1
 s = [int(i) for i in input().split()]
 x = int(input())
 w = []
@@ -265,16 +275,16 @@ if w == []:
 else:
     print(*w)
 
-#20 - 2
+# 2.6.9 - 2
 l = [int(i) for i in input().split()]
 x = int(input())
 if not x in l:
     print('Отсутствует')
 for i in range(len(l)):
-    if l[i]==x:
-        print(i, end = ' ')
+    if l[i] == x:
+        print(i, end=' ')
 
-#21 - 1
+# 2.6.10 - 1
 a = []
 while True:
     x = input()
@@ -336,7 +346,7 @@ else:
                 print(int(a[i - 1][j]) + int(a[ni][j]) + int(a[i][j - 1]) + int(a[i][nj]), end=' ')
         print()
 
-#21 - 2
+# 2.6.10 - 2
 c = []
 while True:
     a = [i for i in input().split()]
@@ -350,7 +360,7 @@ for i in range(n):
         print(x, end=' ')
     print()
 
-#22 - 1
+# 2.6.11
 n = int(input())
 a = [[0 for j in range(n)] for i in range(n)]
 z = 'верх'
@@ -383,7 +393,7 @@ if n % 2 == 1:
 for i in range(0, n):
     print(*a[i])
 
-#23
+# 3.1.8
 def f (x):
     if x <= -2:
         x = 1 - (x + 2)**2
@@ -393,7 +403,7 @@ def f (x):
         x = (x - 2)**2 + 1
     return x
 
-#24
+# 3.1.9
 lst = [1, 2, 3, 4, 5, 6, 8]
 def modify_list(lst):
     z = []
@@ -405,7 +415,7 @@ def modify_list(lst):
 modify_list(lst)
 print(lst)
 
-#25
+# 3.2.5
 def update_dictionary(d, key, value):
     if key in d:
         d[key] += [value]
@@ -414,7 +424,7 @@ def update_dictionary(d, key, value):
     else:
         d[2 * key] = [value]
 
-#26
+# 3.2.6
 s = input()
 s = s.lower()
 s = [i for i in s.split()] # s = s.split()
@@ -429,7 +439,7 @@ for i in (s):
 for i, j in d.items():
     print(i, j)
 
-#27
+# 3.2.7
 # Считайте, что функция f(x) уже определена выше. Определять её отдельно не требуется.
 s = int(input())
 z = {}
@@ -441,7 +451,7 @@ for i in range(s):
         z[x] = f(x)
         print(f(x))
 
-#28
+# 3.4.2
 s = open("s:\\temporary files\\dataset_3363_2.txt")
 s1 = s.readline()
 s1 = list(s1)
@@ -470,7 +480,7 @@ s = open("s:\\temporary files\\03.11.txt", 'w')
 s.write(z)
 s.close()
 
-#29
+# 3.4.3
 d = {}
 with open("s:\\temporary files\\dataset_3363_3.txt") as s:
     for line in s:
@@ -498,7 +508,7 @@ s = open("s:\\temporary files\\19.11.txt", 'w')
 s.write(u)
 s.close()
 
-#30
+# 3.4.4
 d = {}
 w = ''
 m = 0
@@ -524,20 +534,20 @@ s = open("u:\\Temporary file\\16.01.txt", 'w')
 s.write(w)
 s.close()
 
-#31
+# 3.5.2
 import math
 r = float(input())
 p = 2 * math.pi * r
 print(p)
 
-#32
+# 3.5.3
 import sys
 s = sys.argv
 for v in s:
     if v != s[0]:
         print(v + " ")
 
-#33
+# 3.6.2
 import requests
 s = open("u:\\Temporary file\\\dataset_3378_2.txt")
 url = s.readline().strip()
@@ -550,7 +560,7 @@ s = open("u:\\Temporary file\\26.01.txt", 'w')
 s.write(r)
 s.close()
 
-#34
+# 3.6.3
 import requests
 s = open("u:\\Temporary file\\dataset_3378_3.txt")
 url = s.readline().strip()
@@ -569,7 +579,7 @@ s = open("u:\\Temporary file\\27.01.txt", 'w')
 s.write(l)
 s.close()
 
-#35
+# 3.7.1
 d = {}
 s = int(input())
 for i in range (s):
@@ -583,23 +593,23 @@ for i in range (s):
         d[res[2]][0] += 1
     else:
         d[res[2]] = [1, 0, 0, 0, 0]
-    if res[1] > res[3]:
+    if int(res[1]) > int(res[3]):
         d[res[0]][1] += 1
         d[res[0]][4] += 3
         d[res[2]][3] += 1
-    elif res[int(1)] < res[int(3)]:
+    elif int(res[1]) < int(res[3]):
         d[res[2]][1] += 1
         d[res[2]][4] += 3
         d[res[0]][3] += 1
-    elif res[int(1)] == res[int(3)]:
+    elif int(res[1]) == int(res[3]):
         d[res[0]][2] += 1
         d[res[2]][2] += 1
         d[res[0]][4] += 1
         d[res[2]][4] += 1
 for key, value in d.items():
-    print((key + ':'), *value, end = '\n')
+    print((key + ':'), *value, end='\n')
 
-#36
+# 3.7.2
 w1, w2, q1, q2 = input(), input(), input(), input()
 x, x1 = "", ""
 for i in q1:
@@ -618,13 +628,13 @@ for i in q2:
             n += 1
 print(x, '\n' + x1)
 
-#37
+# 3.7.3
 s = int(input())
 a, b, c = [], [], []
-for i in range (s):
+for i in range(s):
     a.append(input().lower())
 s1 = int(input())
-for i in range (s1):
+for i in range(s1):
     v = (input().lower().split())
     for j in v:
         b.append(j)
@@ -638,7 +648,7 @@ for i in b:
             c.append(i)
             print(i)
 
-#38
+# 3.7.4
 s = int(input())
 k1 = 0
 k2 = 0
@@ -654,18 +664,18 @@ for i in range(s):
         k1 -= int(n[1])
 print(k1, k2)
 
-#39
+# 3.7.5
 m = ''
 d = {}
-for i in range (1, 12):
-    d[i] = [0,0]
+for i in range(1, 12):
+    d[i] = [0, 0]
 with open("s:\\temporary files\\dataset_3380_5.txt") as s:
     for line in s:
         line = line.split()
         if int(line[0]) in d:
             d[int(line[0])][0] += int(line[2])
             d[int(line[0])][1] += 1
-for i in range (1, 12):
+for i in range(1, 12):
     if d[i][0] == 0:
         m += str(i)
         m += ' '
