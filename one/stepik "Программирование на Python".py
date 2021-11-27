@@ -12,9 +12,9 @@ else:
 # 1.10.6
 A = int(input())
 if (A % 4 == 0 and A % 100 != 0) or A % 400 == 0:
-    print ("Високосный")
+    print("Високосный")
 else:
-    print ("Обычный")
+    print("Обычный")
 
 # 1.12.1
 a, b, c = int(input()), int(input()), int(input())
