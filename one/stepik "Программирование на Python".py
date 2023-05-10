@@ -1,3 +1,5 @@
+# Программирование на Python
+
 # 1.10.5
 A = int(input())
 B = int(input())
@@ -5,9 +7,9 @@ H = int(input())
 if A <= H <= B:
     print ("Это нормально")
 elif A > H:
-    print ("Недосып")
+    print("Недосып")
 else:
-    print ("Пересып")
+    print("Пересып")
 
 # 1.10.6
 A = int(input())
@@ -24,7 +26,7 @@ print (float(S))
 
 # 1.12.2
 a = int(input())
-if -15 < a <=12 or 14 < a < 17 or a >= 19:
+if -15 < a <= 12 or 14 < a < 17 or a >= 19:
     print (True)
 else:
     print (False)
@@ -688,3 +690,13 @@ for i in range(1, 12):
 s = open("s:\\temporary files\\31.01.txt", 'w')
 s.write(m)
 s.close()
+
+
+# Python: основы и применение
+
+# 1.1.9
+q = 0
+n = int(input())
+for i in range(n):
+    q += int(input())
+print(q)
